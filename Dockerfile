@@ -10,7 +10,8 @@ WORKDIR /home/flasky
 
 COPY requirements requirements
 RUN python -m venv venv
-RUN venv/bin/pip install -r requirements/docker.txt
+
+RUN venv/bin/pip install -r requirements/docker.txt -i https://mirrors.aliyun.com/pypi/simple/
 
 COPY app app
 COPY migrations migrations
