@@ -16,6 +16,7 @@ RUN venv/bin/pip install -r requirements/docker.txt -i https://mirrors.aliyun.co
 COPY app app
 COPY migrations migrations
 COPY flasky.py config.py boot.sh ./
+COPY .env .env-mysql ./
 
 # run-time configuration
 EXPOSE 5000
